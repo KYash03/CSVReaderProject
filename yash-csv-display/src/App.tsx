@@ -17,11 +17,11 @@ const App: React.FC = () => {
     };
     reader.readAsText(file);
   };
-
+ 
   const groupDataBySession = (data: string[][]): { session: string; data: string[][] }[] => {
     const sessions: { [key: string]: string[][] } = {};
 
-    for (let i = 1; i < data.length; i++) {
+    for (let i = 1; i < data.length; i++) {           
       const session = data[i][6]; // Assuming the "Session" column is at index 6
       if (!sessions[session]) {
         sessions[session] = [];
